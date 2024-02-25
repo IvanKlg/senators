@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>US Senators</title>
+    <link rel="stylesheet" href="senatorstyle.css">
+    <link rel="icon" href="Images/Us_senate_seal.png" type="image/x-icon">
+</head>
+
+<body>
+    <!--===============NAVBAR TO SCROLL TO PAGE SECTIONS===============-->
+    <nav class="navbar">
+        <div class="navcontent">
+            <div class="navpic">
+                <img src="Images/Us_senate_seal.png" alt="weblogo">
+            </div>
+            <h1 id = "homescroll">United States Senators</h1>
+            <div class="navlist">
+                <ul>
+                    <li><a href="#homescroll">Home</a></li>
+                    <li><a href="#leadersscroll">Leaders</a></li>
+                    <li><a href="#senatorsscroll">Senators</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!--===============BOX TO CONTAIN SIDEBARS AND MAIN BODY===============-->
+    <div class="bodybox">
+
+        <!--===============LEFT SIDEBAR===============-->
+        <div class="side left"></div>
+
+
+        <!--===============RED AND BLUE PARTY BAR===============-->
+        <div class="partybar">
+            <!--==Democrats==-->
+            <div class="bar" id="democrat_blue">
+                <div class = "barcontent"></div>
+                <div class = "ttip"></div>
+            </div>
+            <!--==Democrat icon==-->
+            <div id="donke"><img src="Images/donke.png" alt="party icons"></div>
+
+            <!--==Independent==-->
+            <div class = "bar" id = "inde_gold">
+                <div class = "barcontent"></div>
+                <div class = "ttip"></div>
+            </div>
+
+            <!--==Republican icon==-->
+            <div id="elephant"><img src="Images/elephant.png" alt="party icons"></div>
+
+            <!--==Republicans==-->
+            <div class="bar" id="repub_red">
+                <div class = "barcontent"></div>
+                <div class = "ttip"></div>
+            </div>
+        </div>
+
+
+    <!--===============MAIN CONTENT DIV==============-->
+    <div class="main">
+
+
+            <!--===============LEADERS SECTION===============-->
+            <h2 id = "leadersscroll">Leaders</h2>
+            <div id= "leaders"></div>
+
+
+
+            <!--===============SENATORS SECTION===============-->            
+            <!--===============FILTER DROPDOWN===============-->
+            <!--==Filter dropdown https://www.w3schools.com/html/html_form_elements.asp==-->
+            <div class="filterbox">            
+                <h2 id = "senatorsscroll">Senators</h2>
+                <div class = "dropdiv">PARTY</div><select id="partydropdown"></select>
+                <div class = "dropdiv">STATE</div><select id="statedropdown"></select>
+                <div class = "dropdiv">RANK</div><select id="rankdropdown"></select>
+
+                <!--===============SEARCHBAR FILTER===============-->
+                <!--==search by word //https://www.w3schools.com/howto/howto_js_filter_lists.asp==-->
+                <div class="searchfilterdiv">
+                    <input type="text" id="searchinput" placeholder="Search for a name...">
+                </div>
+            </div>
+
+            <div id="senators"></div>
+            
+
+
+        <!--==Close main content div==-->
+        </div>
+        
+        <!--===============RIGHT SIDEBAR===============-->
+        <div class="side right"></div>
+
+    <!--==Close body box==-->
+    </div>
+    <footer class = "foot"></footer>
+
+    <!--===============JS==============-->
+    <script src = "senators.js">
+    </script>
+
+</body>
+</html>

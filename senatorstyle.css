@@ -1,0 +1,522 @@
+body, html {
+    color: rgb(0, 0, 0);
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    margin-left: 12%;
+    margin-right: 12%;
+    flex: 1;
+}
+
+h1 {
+    text-align: center;
+}
+
+.bodybox {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: space-between;
+}
+
+
+.hide {
+    display: none !important;
+}
+
+
+/*==========================================================*/
+/*---------------------NAVIGATION BAR----------------------*/
+.navbar {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: rgb(0, 0, 51);
+    box-shadow: 0px 0.5px 10px rgb(105, 97, 97);
+    color: white;
+    font-size: x-large;
+    box-sizing: border-box;
+}
+
+.navcontent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 60%;
+    padding: 0 20%;
+    align-items: center;
+}
+.navbar a {
+    color: blanchedalmond;
+    text-decoration: none;
+}
+.navbar a:hover {
+    background-color: rgba(231, 192, 133, 0.199); 
+    text-decoration: underline;
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    margin-left: 15%;
+}
+
+.navbar li {
+    margin-left: 15%;
+    font-size: large;
+}
+
+.navpic img {
+    width: 30%;
+    height: auto;
+    border-radius: 90%;
+}
+/*---------------------NAVIGATION BAR END---------------------*/
+/*===========================================================*/
+
+
+
+/*=============================================================*/
+/*---------------------WEBPAGE SIDEBARS-----------------------*/
+.side {  
+    position: fixed;
+    top: 0;
+    bottom: 0%;
+    width: 10%;
+    background: url(https://i.pinimg.com/originals/10/95/66/10956627a25f274182255997210986ff.jpg) no-repeat center center; 
+    background-size: cover;
+    opacity: 0.8;
+}
+
+.left {
+    left: 0;
+}
+
+.right {
+    right: 0;
+}
+/*---------------------WEBPAGE SIDEBARS END---------------------*/
+/*=============================================================*/
+
+
+
+/*============================================================*/
+/*---------------------PARTY  BAR----------------------------*/
+.partybar {
+    position: relative;
+    display: flex;
+    width: 80%;
+    height: 10%;
+    margin: 0 auto;    
+}
+
+.bar {
+    flex-grow: 1;
+    height: inherit;
+    display: inherit;
+    font-weight: 900;
+    color: white;
+    font-size: xx-large;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+#repub_red {
+    background-color: rgba(255, 16, 16, 0.466);
+}
+#democrat_blue {
+    background-color: rgba(9, 9, 180, 0.575);
+}
+
+#donke img {
+    position: absolute;
+    transform: translate(-105%);
+    display: flex;
+    width: auto;
+    height: 100%;
+}
+
+#elephant img {
+    position: absolute;
+    display: flex;
+    width: auto;
+    height: 100%;
+}
+
+
+#inde_gold {
+    background-color: rgb(255, 226, 64);
+    color: rgb(255, 255, 255);
+}
+
+/*https://www.w3schools.com/css/css_tooltip.asp*/
+.ttip {
+    visibility: hidden;
+    width: auto;
+    background-color: rgb(0, 0, 51);
+    color: white;
+    font-size: medium;
+    text-align: center;
+    border-radius: 5%;
+    padding: 1% 1%;
+    opacity: 0;
+    transition: opacity 0.4s;
+    top: 120%;
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    margin-left: -60px;
+}
+
+#inde_gold .ttip {
+    left: 50%;
+    transform: translate(13%);
+    padding: 16%;
+}
+
+#democrat_blue .ttip {
+    left: 50%;
+    transform: translate(7%);
+}
+
+.bar:hover .ttip {
+    visibility: visible;
+    opacity: 1;
+}
+
+.ttip::after {
+    content: "";
+    position: absolute;
+    bottom: 94%;
+    left: 50%;
+    margin-left: -6px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgb(0, 0, 51) transparent transparent transparent;
+}
+/*---------------------PARTY BAR END---------------------------*/
+/*============================================================*/
+
+
+
+/*============================================================*/
+/*---------------------PARTY AFFILIATIONS--------------------*/
+
+#partyafil {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style-type: none;
+    font-size: larger;
+}
+
+/*=============================================================*/
+/*---------------------LEADERS LIST---------------------------*/
+
+#leadersscroll {
+    margin-top: 2%;
+    margin-bottom: 0;
+}
+
+#leaders ul{
+    list-style-type: none;
+    padding-left: 0px;
+    padding-top: 1%;
+    font-size: large;
+    font-weight: 500;
+    border-top: 4px solid #0b0281;
+    width: 100%;
+    border-radius: 3px;
+}
+
+/* For this task the input file is fixed, and since there are no Independent leaders no need for IndependentLead class  */
+.RepublicanLead {
+    color: rgba(255, 16, 16, 0.681);
+}
+
+.DemocratLead {
+    color: rgba(9, 9, 180, 0.664);
+}
+
+/*---------------------LEADERS LIST END------------------------*/
+/*============================================================*/
+
+
+
+
+/*=============================================================*/
+/*---------------------SENATORS LIST--------------------------*/
+
+#senatorsscroll {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: 19%;
+}
+
+.senators {
+    padding: 6px;
+    margin: 5px;
+    list-style-type: none;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+}
+
+.additionalInfo {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.additionalInfo img, ul {
+    display: inline-block;
+    margin: 5px;
+    vertical-align: middle;
+}
+
+.additionalInfo img {
+    border-radius: 10px;
+    max-width: 200px;
+    max-height: 240px;
+}
+
+.additionalInfo ul {
+    list-style-type: none;
+}
+
+.Republican {
+    background-color: rgba(255, 16, 16, 0.681);
+}
+
+.Democrat {
+    background-color: rgba(9, 9, 180, 0.664);
+}
+
+.Independent {
+    background-color: rgba(255, 226, 64, 0.782);;
+}
+
+/* There is some redundancy here but it cannot be avoided, each color has to be adjusted individually */
+/* Reduction of general properties like brightness affects contents of the div and not only the background */
+.RepublicanOpen, .Republican:hover {
+    background-color: rgb(122, 0, 0);
+    transition: 0.2s;
+}
+
+.DemocratOpen, .Democrat:hover {
+    background-color: rgba(2, 2, 137, 0.922);
+    transition: 0.2s;
+}
+
+.IndependentOpen, .Independent:hover {
+    background-color: rgb(214, 182, 0);
+    transition: 0.2s;
+}
+
+/*---------------------SENATORS LIST END---------------------*/
+/*==========================================================*/
+
+
+/*=============================================================*/
+/*---------------------FILTERS AND SEARCH BAR-----------------*/
+/* Container for the dropdowns and search input */
+.filterbox {
+    display: flex;
+    align-items: center;
+    padding: 1% 0;
+    border-bottom: 5px solid #0b0281;
+    border-radius: 3px;
+    margin-bottom: 2%;
+    margin-top: 5%;
+}
+
+/* Styles for the dropdowns */
+.filterbox select {
+    padding: 0.6% 0.6%;
+    margin-right: 2%; 
+    border: 1px solid #0c0386;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    font-weight: 300;
+}
+
+.searchfilterdiv {
+    padding: 6px;
+    border: 1px solid #0c0386;
+    background-color: #f9f9f9;
+    border-radius: 9px;
+    height: 1%;
+    margin-left: auto;
+    width: 25%;
+    
+}
+
+.searchfilterdiv input {
+    border-color: transparent;
+    background-color: #f9f9f9;
+    width: 95%;
+}
+
+.searchfilterdiv input:focus {
+    border-color: transparent;
+    outline: none;
+}
+
+.dropdiv {
+    padding: 0.55% 0.55%;
+    border: 1px solid #0c0386;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    font-weight: 600;
+    margin-right: 0.3%;
+
+}
+
+/*---------------------FILTERS AND SEARCH BAR END-------------*/
+/*===========================================================*/
+
+
+/*=============================================================*/
+/*---------------------FOOTER---------------------------------*/
+.foot {
+    width: 100%;
+    min-height: 50px;
+    box-shadow: 0px 0.5px 10px rgb(105, 97, 97);
+    background-color: rgb(0, 0, 51);    
+}
+
+/*---------------------FOOTER END-----------------------------*/
+/*===========================================================*/
+
+
+
+/*#################################################################################*/
+/*-------------------------------SMALLER DEVICES----------------------------------*/
+
+/*==========================================================*/
+/*---------------------NAVIGATION BAR----------------------*/
+@media (max-width: 1000px) {
+    .navbar ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        justify-content: center;
+    }
+    .navbar li {
+        display: flex;
+        margin: 10%;
+        align-items: center;
+        width: 100%;
+        font-size: 110%;
+        justify-content: center;
+    }
+    
+    .navpic img {
+        right: 50%;
+        transform: translate(110%);
+
+    }
+    .navcontent {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 0;
+    }
+/*---------------------NAVIGATION BAR END---------------------*/
+/*===========================================================*/
+
+
+
+/*==========================================================*/
+/*---------------------PARTY BAR---------------------------*/
+#inde_gold {
+    color: transparent;
+}
+/*---------------------PARTY BAR END--------------------------*/
+/*===========================================================*/
+
+
+#leadersscroll {
+    text-align: center;
+    margin-top: 5%;
+}
+
+
+/*==========================================================*/
+/*---------------------FILTERS AND SEARCH BAR--------------*/
+
+    #senatorsscroll {
+        margin: 0;
+        text-align: center;
+        width: 100%;
+        margin-right: 2%;
+    }      
+
+    #senatorsscroll::after {
+        content: ''; 
+        display: block; 
+        height: 4px; 
+        width: 100%; 
+        border-radius: 9px;
+        background-color:#0b0281;
+        bottom: -6%; 
+    } 
+
+    .filterbox {
+        display: flex;
+        box-sizing: border-box;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        border-width: 3px;
+    }
+
+    
+    .filterbox > * {
+        width: 50%;
+        margin-top: 1%;
+        margin-right: 4%;
+        text-align: center;
+    }
+    
+    .dropdiv {
+        border: 2px solid gold;
+        padding: 2%;
+        margin-top: 4%;
+        width: 30%;
+        text-align: center;
+        font-weight: 600;
+
+    }
+
+    .searchfilterdiv {
+        width: 80%;
+        margin-top: 4%;
+        margin-left: 4%;
+    }
+}
+
+@media (max-width: 1400px) and (min-width: 1000px) {
+
+    .filterbox {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .searchfilterdiv {
+        margin: 0;
+        width: 80%;
+        margin-top: 1%;
+    }
+}
+/*===========================================================*/
+/*---------------------FILTERS AND SEARCH BAR END-----------*/
+
+
+/*-------------------------------SMALLER DEVICES END------------------------------*/
+/*###############################################################################*/
